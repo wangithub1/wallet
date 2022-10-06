@@ -17,6 +17,7 @@
         </v-card-title >
 
         <v-card-text>
+            <String label="Holder" v-model="value.holder" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>

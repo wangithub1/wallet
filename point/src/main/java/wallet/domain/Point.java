@@ -16,6 +16,8 @@ public class Point {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private String holder;
+
     @PostPersist
     public void onPostPersist() {
         PointsDeducted pointsDeducted = new PointsDeducted(this);

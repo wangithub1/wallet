@@ -67,6 +67,7 @@
             headers: 
                 [
                     { text: "id", value: "id" },
+                    { text: "holder", value: "holder" },
                 ],
             point : [],
             newValue: {},
@@ -84,6 +85,7 @@
             this.values = temp.data._embedded.points;
 
             this.newValue = {
+                'holder': '',
             }
         },
         methods: {
