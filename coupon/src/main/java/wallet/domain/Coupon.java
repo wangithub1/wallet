@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.*;
 import lombok.Data;
 import wallet.CouponApplication;
+import wallet.domain.CouponCancelled;
 import wallet.domain.CouponPurchased;
 
 @Entity
@@ -28,6 +29,9 @@ public class Coupon {
     public void onPostPersist() {
         CouponPurchased couponPurchased = new CouponPurchased(this);
         couponPurchased.publishAfterCommit();
+
+        CouponCancelled couponCancelled = new CouponCancelled(this);
+        couponCancelled.publishAfterCommit();
     }
 
     public static CouponRepository repository() {

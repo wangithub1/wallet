@@ -37,6 +37,22 @@ public class PolicyHandler {
         // Sample Logic //
         Point.usePoint(event);
     }
+
+    @StreamListener(
+        value = KafkaProcessor.INPUT,
+        condition = "headers['type']=='CouponCancelled'"
+    )
+    public void wheneverCouponCancelled_CempensatePoint(
+        @Payload CouponCancelled couponCancelled
+    ) {
+        CouponCancelled event = couponCancelled;
+        System.out.println(
+            "\n\n##### listener CempensatePoint : " + couponCancelled + "\n\n"
+        );
+
+        // Sample Logic //
+        Point.cempensatePoint(event);
+    }
     // keep
 
 }
