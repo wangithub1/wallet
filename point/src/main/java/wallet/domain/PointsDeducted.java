@@ -10,6 +10,8 @@ import wallet.infra.AbstractEvent;
 public class PointsDeducted extends AbstractEvent {
 
     private Long id;
+    private Integer holder;
+    private Integer amount;
 
     public PointsDeducted(Point aggregate) {
         super(aggregate);

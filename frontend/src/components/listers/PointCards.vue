@@ -68,7 +68,8 @@
             me.values = temp.data._embedded.points;
             
             me.newValue = {
-                'holder': '',
+                'holder': 0,
+                'amount': 0,
             }
         },
         methods:{

@@ -6,7 +6,10 @@
 
         <v-card-text>
             <div>
-                <String label="Holder" v-model="item.holder" :editMode="editMode" @change="change" />
+                <Number label="Holder" v-model="item.holder" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Number label="Amount" v-model="item.amount" :editMode="editMode" @change="change" />
             </div>
         </v-card-text>
 

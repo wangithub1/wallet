@@ -68,6 +68,7 @@
                 [
                     { text: "id", value: "id" },
                     { text: "holder", value: "holder" },
+                    { text: "amount", value: "amount" },
                 ],
             point : [],
             newValue: {},
@@ -85,7 +86,8 @@
             this.values = temp.data._embedded.points;
 
             this.newValue = {
-                'holder': '',
+                'holder': 0,
+                'amount': 0,
             }
         },
         methods: {

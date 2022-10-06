@@ -16,7 +16,9 @@ public class Point {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String holder;
+    private Integer holder;
+
+    private Integer amount;
 
     @PostPersist
     public void onPostPersist() {
