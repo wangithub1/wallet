@@ -53,6 +53,4 @@ public class PolicyHandler {
         // Sample Logic //
         Point.cempensatePoint(event);
     }
-    // keep
-
 }

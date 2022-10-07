@@ -17,5 +17,4 @@ public class PointController {
 
     @Autowired
     PointRepository pointRepository;
-    // keep
 }

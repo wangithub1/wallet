@@ -17,5 +17,4 @@ public class CouponController {
 
     @Autowired
     CouponRepository couponRepository;
-    // keep
 }
